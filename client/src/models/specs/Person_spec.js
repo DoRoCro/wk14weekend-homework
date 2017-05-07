@@ -5,7 +5,7 @@ var person
 
 describe('guess who Person', function () {
   beforeEach(function () {
-    person = new Person('name', 'https://test_img', 'answer1', 'answer2', 'answer3')
+    person = new Person('name', 'https://test_img', ['answer1', 'answer2', 'answer3'])
   })
 
   it('it has name', function () {
@@ -17,14 +17,14 @@ describe('guess who Person', function () {
   })
 
   it('it has answer to question1', function () {
-    assert.strictEqual('answer1', person.answer1)
+    assert.strictEqual('answer1', person.answers[0])
   })
 
   it('it has answer to question2', function () {
-    assert.strictEqual('answer2', person.answer2)
+    assert.strictEqual('answer2', person.answers[1])
   })
 
   it('it has answer to question3', function () {
-    assert.strictEqual('answer3', person.answer3)
+    assert.strictEqual('answer3', person.answers[2])
   })
 })
