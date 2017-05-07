@@ -1,5 +1,5 @@
 import React from 'react'
-import Selector from '../components/selector'
+import Selector from '../components/Selector'
 import QuizSet from '../models/QuizSet'
 import CandidatePix from '../containers/CandidatePix'
 import QuestionsBox from '../containers/QuestionsBox'
@@ -27,6 +27,7 @@ class GuessWho extends React.Component {
       return quizset.title
     })
     console.log(this.state, quizSetNames)
+    console.log(this.state.quizSets[0].people);
     return (
       <div id='guesswho' className='guesswho-container'>
         <h1>GuessWho?</h1>
