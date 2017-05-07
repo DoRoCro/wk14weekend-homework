@@ -20,4 +20,12 @@ describe('guess who Quiz Set people and relevant questions', function () {
   it('has questions', function () {
     assert.strictEqual(4, quizSet.questions.length)
   })
+
+  it('can have a title', function() {
+    quizSet.setTitle('QuizSetTitle to display')
+    assert.strictEqual('QuizSetTitle to display', quizSet.title
+
+      )
+
+  })
 })

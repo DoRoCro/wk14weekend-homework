@@ -7,6 +7,10 @@ class QuizSet {
     this.questions = questions
   }
 
+  setTitle (title) {
+    this.title = title
+  }
+
 }
 
 module.exports = QuizSet
