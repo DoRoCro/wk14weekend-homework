@@ -1,6 +1,9 @@
 import React from 'react'
 import Selector from '../components/selector'
 import QuizSet from '../models/QuizSet'
+import CandidatePix from '../containers/CandidatePix'
+import QuestionsBox from '../containers/QuestionsBox'
+
 class GuessWho extends React.Component {
   constructor (props) {
     super(props)
@@ -28,6 +31,8 @@ class GuessWho extends React.Component {
       <div id='guesswho' className='guesswho-container'>
         <h1>GuessWho?</h1>
         <Selector options={quizSetNames} id='game-selector' className='selector' />
+        <CandidatePix id='candidate-pix' className='candidate-container' candidates={this.state.quizSets[0].people} />
+        <QuestionsBox id='questions-container' className='container' questions={this.state.quizSets[0].questions} candidates={this.state.quizSets[0].people} />
       </div>
     )
   }
